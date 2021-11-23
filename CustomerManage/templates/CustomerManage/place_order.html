@@ -1,0 +1,26 @@
+{%  extends 'CustomerManage/main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-body">
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{formset.management_form}}
+
+                {% for form in formset %}
+                    {{form}}
+                    <hr>
+                {% endfor %}
+                    <button type="submit" class="btn btn-md btn-info">Submit</button> 
+                    
+                
+                
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

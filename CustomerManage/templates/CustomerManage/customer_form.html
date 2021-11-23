@@ -1,0 +1,23 @@
+{%  extends 'CustomerManage/main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-body">
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                <table cellpadding="10">
+                    {{form}}
+                    <tr>
+                        <td colspan="2" align="center"><button type="submit" class="btn btn-md btn-info">Submit</button> </td>
+                    </tr>
+                </table>
+                
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
